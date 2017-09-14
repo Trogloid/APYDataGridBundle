@@ -2122,7 +2122,7 @@ class Grid implements GridInterface
         }
 
         if ($isReadyForRedirect) {
-            return new RedirectResponse($this->getRouteUrl());
+            return new RedirectResponse($this->getRouteUrl().'?'.$this->requestData['_order']);
         } else {
             if (is_array($param1) || $param1 === null) {
                 $parameters = (array) $param1;
